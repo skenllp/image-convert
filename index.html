@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Online Image Converter — JPG, PNG &amp; WebP | ImageConvert</title>
+<meta name="description" content="Convert JPG, PNG and WebP images online for free. Fast, private and easy image conversion directly in your browser.">
+<link rel="canonical" href="https://YOURDOMAIN.com/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="ImageConvert — Convert Images Online">
+<meta property="og:description" content="JPG • PNG • WebP • Fast & Private. Convert images directly in your browser, no upload required.">
+<meta property="og:image" content="https://YOURDOMAIN.com/assets/og-image.png">
+<meta property="og:url" content="https://YOURDOMAIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ImageConvert">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ImageConvert — Convert Images Online">
+<meta name="twitter:description" content="JPG • PNG • WebP • Fast & Private. Convert images directly in your browser, no upload required.">
+<meta name="twitter:image" content="https://YOURDOMAIN.com/assets/og-image.png">
+
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top"><span>Image<span class="dot">Convert</span></span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#tool" data-mode-link="convert">Image Converter</a></li>
+        <li><a href="#tool" data-mode-link="compress">Compress Image</a></li>
+        <li><a href="#tool" data-mode-link="resize">Resize Image</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="#tool" class="btn btn-primary desktop-only">Convert Image</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <p class="hero-eyebrow">Free &amp; browser-based</p>
+        <h1>Convert Images Online — Fast, Free &amp; Private</h1>
+        <p class="lede">Convert JPG, PNG and WebP images directly in your browser. No registration required.</p>
+        <div class="hero-cta">
+          <a href="#tool" class="btn btn-primary">Upload Image</a>
+        </div>
+        <p class="hero-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Your images are processed locally in your browser whenever possible.
+        </p>
+      </div>
+      <div class="format-chain" aria-hidden="true">
+        <div class="format-chip"><div class="swatch" style="background:#e08a2c">PNG</div></div>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="format-chip"><div class="swatch" style="background:#3557e0">JPG</div></div>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="format-chip"><div class="swatch" style="background:#14161c">WebP</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section" id="tool">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="mode-tabs" role="tablist" aria-label="Image tool mode">
+          <button class="mode-tab" role="tab" data-mode="convert" aria-selected="true">Convert</button>
+          <button class="mode-tab" role="tab" data-mode="compress" aria-selected="false">Compress</button>
+          <button class="mode-tab" role="tab" data-mode="resize" aria-selected="false">Resize</button>
+        </div>
+        <h2 id="toolHeading">Image Converter</h2>
+        <p id="toolSub">Convert PNG, JPG and WebP files. Everything happens on your device.</p>
+      </div>
+
+      <div class="tool-grid">
+        <!-- Upload / preview panel -->
+        <div class="panel panel-pad" id="uploadPanel">
+          <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload image, drag and drop or choose a file">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4m0 0L7 9m5-5l5 5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="dz-title">Drag &amp; drop your image here</div>
+            <div class="dz-sub">or</div>
+            <button type="button" class="btn btn-secondary" id="chooseBtn">Choose Image</button>
+            <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp,image/gif,image/bmp" multiple>
+          </div>
+
+          <div id="singlePreviewArea" hidden>
+            <div class="preview-wrap"><img id="previewImg" alt="Preview of the uploaded image"></div>
+            <div class="file-meta">
+              <div>Filename<strong id="metaName">—</strong></div>
+              <div>Format<strong id="metaFormat">—</strong></div>
+              <div>Size<strong id="metaSize">—</strong></div>
+              <div>Dimensions<strong id="metaDims">—</strong></div>
+            </div>
+
+            <div id="resultArea" class="result-card" hidden>
+              <h3 style="font-size:1rem;margin-bottom:10px;">Converted image</h3>
+              <div class="preview-wrap"><img id="resultImg" alt="Preview of the converted image"></div>
+              <div class="result-stats">
+                <div>Original<strong id="statOriginal">—</strong></div>
+                <div>Converted<strong id="statConverted">—</strong></div>
+                <div>Dimensions<strong id="statDims">—</strong></div>
+                <div><span class="reduction-badge" id="statReduction">—</span></div>
+              </div>
+              <a class="btn btn-primary" id="downloadBtn" download>Download Image</a>
+            </div>
+          </div>
+
+          <!-- Multi-file list (convert mode) -->
+          <div id="multiArea" hidden>
+            <ul class="file-list" id="fileList"></ul>
+            <div class="batch-actions">
+              <button class="btn btn-primary" id="convertAllBtn">Convert All</button>
+              <button class="btn btn-secondary" id="downloadAllBtn" hidden>Download All (ZIP)</button>
+              <button class="btn btn-ghost" id="clearAllBtn">Clear all</button>
+            </div>
+          </div>
+
+          <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+        </div>
+
+        <!-- Controls panel -->
+        <div class="panel panel-pad" id="controlsPanel">
+          <div id="transparencyNotice" class="notice notice-warn" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.29 3.86l-8.18 14.18A2 2 0 004 21h16a2 2 0 001.89-2.96L13.71 3.86a2 2 0 00-3.42 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>JPG does not support transparency. Choose a background color below.</span>
+          </div>
+
+          <div class="field" id="formatField">
+            <label for="outputFormat">Convert to</label>
+            <select id="outputFormat">
+              <option value="image/jpeg">JPG</option>
+              <option value="image/png">PNG</option>
+              <option value="image/webp">WebP</option>
+            </select>
+          </div>
+
+          <div class="field" id="bgField" hidden>
+            <label>Background color</label>
+            <div class="swatch-row">
+              <button type="button" class="color-opt white" data-color="#ffffff" aria-pressed="true" aria-label="White background"></button>
+              <button type="button" class="color-opt black" data-color="#000000" aria-pressed="false" aria-label="Black background"></button>
+              <input type="color" id="customColor" value="#ffffff" aria-label="Custom background color">
+            </div>
+          </div>
+
+          <div class="field" id="qualityField">
+            <label for="qualitySlider">Quality</label>
+            <div class="slider-row">
+              <input type="range" id="qualitySlider" min="10" max="100" value="80">
+              <span class="slider-value"><span id="qualityValue">80</span>%</span>
+            </div>
+            <p class="field-hint" id="qualityHint">Lower quality means a smaller file. PNG is lossless — this setting only affects JPG and WebP output.</p>
+          </div>
+
+          <div class="field" id="resizeToggleField">
+            <div class="checkbox-row">
+              <input type="checkbox" id="resizeToggle">
+              <label for="resizeToggle">Resize image</label>
+            </div>
+          </div>
+
+          <div class="field" id="resizeFields" hidden>
+            <label>Dimensions (pixels)</label>
+            <div class="dim-row">
+              <input type="number" id="widthInput" placeholder="Width" min="1">
+              <input type="number" id="heightInput" placeholder="Height" min="1">
+            </div>
+            <div class="checkbox-row" style="margin-top:12px;">
+              <input type="checkbox" id="aspectLock" checked>
+              <label for="aspectLock">Maintain aspect ratio</label>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block" id="convertBtn" disabled>Convert Image</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Everything runs where your image already is</h2>
+        <p>No uploads, no waiting on a server queue, no accounts to create.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l5-5 4 4 5-6 4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Convert between formats</h3>
+          <p>Switch between JPG, PNG and WebP in a couple of clicks, with correct handling of transparency and quality.</p>
+        </div>
+        <div class="feature-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14a8 8 0 1116 0M4 14v6a1 1 0 001 1h3v-6H5zm11 1h3a1 1 0 011 1v5h-4v-6z"/></svg>
+          <h3>Compress without losing detail</h3>
+          <p>Dial in a quality level and watch file size drop, with a live before-and-after comparison.</p>
+        </div>
+        <div class="feature-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Resize to exact pixels</h3>
+          <p>Set a width or height and let the aspect ratio follow automatically, or set both manually.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section id="privacy">
+    <div class="wrap">
+      <div class="privacy-block">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg>
+        <div>
+          <h2>Private by design</h2>
+          <p>Your images are processed directly in your browser whenever possible. They are not uploaded to our server for normal conversion, compression or resizing — the file never leaves your device during those operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>About ImageConvert</h2>
+        <p>A small, focused tool for a common problem.</p>
+      </div>
+      <p style="max-width:70ch;">ImageConvert converts, compresses and resizes JPG, PNG and WebP images using your browser's own Canvas engine — the same technology browsers use to draw every image on the web. That means conversion happens on your device, not on a remote server, so there's nothing to upload, no waiting in a queue, and no account required.</p>
+      <p style="max-width:70ch;">We currently support conversion between JPG, PNG and WebP, the three formats every modern browser can reliably read and write on the client side. Formats like HEIC, AVIF and TIFF need additional decoding support that isn't consistently available in-browser yet, so we don't advertise them until we can support them properly.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is ImageConvert free? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+          <div class="faq-a"><p>Yes. Converting, compressing and resizing images is free, with no account or sign-up required.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Are my images uploaded to a server? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+          <div class="faq-a"><p>No. Conversion, compression and resizing all run locally in your browser using the Canvas API. Your files stay on your device.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How do I convert PNG to JPG? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+          <div class="faq-a"><p>Upload your PNG in the converter above, choose JPG as the output format, pick a background color if the image has transparency, and select Convert Image.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I convert JPG to WebP? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+          <div class="faq-a"><p>Yes, WebP is one of the three supported output formats, alongside JPG and PNG.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I convert multiple images at once? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+          <div class="faq-a"><p>Yes. Drop several files onto the converter and use Convert All, then Download All to get every converted image in a single ZIP file.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Does JPG support transparency? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+          <div class="faq-a"><p>No. JPG has no alpha channel, so transparent areas are filled with a background color you choose before export.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What image formats are supported? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+          <div class="faq-a"><p>JPG, PNG and WebP are fully supported for both reading and writing. Other formats may be added as browser support becomes reliable.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is there a file-size limit? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+          <div class="faq-a"><p>There's no hard cap, but very large images (above roughly 40 megapixels) can be slow or memory-heavy to process, since everything runs on your device. We'll warn you if a file looks unusually large.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top"><span>Image<span class="dot">Convert</span></span></a>
+        <p>Fast, simple and private image tools for everyone.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#tool" data-mode-link="convert">Converter</a></li>
+            <li><a href="#tool" data-mode-link="compress">Compress</a></li>
+            <li><a href="#tool" data-mode-link="resize">Resize</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:hello@imageconvert.example">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 ImageConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="js/converter.js"></script>
+<script src="js/compressor.js"></script>
+<script src="js/resizer.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
