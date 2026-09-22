@@ -71,6 +71,13 @@ Before going live:
 2. Update the `mailto:hello@imageconvert.example` contact links in the footer and legal pages.
 3. Serve over HTTPS — required for `og:image` to preview correctly on WhatsApp, LinkedIn, etc.
 
+### Testing the WhatsApp / social preview
+
+1. Deploy first — WhatsApp's crawler must be able to fetch a real public HTTPS URL; it can't see `file://` paths or localhost.
+2. Run your live URL through [Facebook's Sharing Debugger](https://developers.facebook.com/tools/debug/) and click **Scrape Again**. WhatsApp shares the same crawler infrastructure, so this is the most reliable way to preview and force-refresh what it sees.
+3. WhatsApp caches previews aggressively per URL. If you update `og-image.png` later, bump the version query string in `index.html` (`og-image.png?v=2`) so it's treated as a new asset instead of serving the stale cached one.
+4. Keep the OG image under ~300KB — some WhatsApp clients silently drop previews above that. The current image is ~42KB, well under the limit.
+
 ## What was intentionally left out (v1 scope)
 
 Per the brief, this version has **no backend, database, authentication, or server-side image processing**. HEIC/AVIF/TIFF conversion, an editor, filters, OCR, background removal, accounts and payments are not implemented — the codebase is organized (separate `converter` / `compressor` / `resizer` modules, a single settings object passed into the conversion pipeline) so those can be layered on without a rewrite.
